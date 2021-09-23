@@ -26,6 +26,10 @@ int findMin(int numbers[], int N, int ith)
 {
     int min, ids, i;
     min = numbers[ith];
+    
+    // Add this line to set the initial value for ids.
+    // ids = ith; 
+    
     for(i=ith;i<N;i++)
     {
         if (min>numbers[i] )
