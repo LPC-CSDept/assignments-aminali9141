@@ -25,6 +25,9 @@ int main()
     {
         target = array[rand() % N];
         total_linear =- linearSearch(array, N, target);
+	    
+	    // You expect " += " ?
+	    
     }
     cout << "The average comparision numbers of Linear Search is" << total_linear / 100 << endl;
 
@@ -68,10 +71,10 @@ void bubbleSort(int array[], int N)
 
 int linearSearch(int array[], int N, int target)
 {
-   
+   // need to complete here
 }
 
 int binarySearch(int array[], int N, int target)
 {
- 
+    // need to complete here
 }
