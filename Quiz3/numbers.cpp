@@ -1,8 +1,9 @@
-#include numbers.hpp
+#include "numbers.hpp"
+#include <iostream>
 
 using namespace std;
 
-Numbers::Numbers() {
+Numbers::Numbers(){
     id = -1;
     numbers.reserve(0);
 }
@@ -16,5 +17,16 @@ Numbers::Numbers(int setID, int size) {
         numbers.push_back((rand() % 99));
     }
 }
+
+int Numbers::getID() const{
+    return id;
+}
+int Numbers::getSize() const{
+    return numbers.size;
+}
+int Numbers::getElm(int index) const {
+    return numbers[i];
+}
+
 
  
