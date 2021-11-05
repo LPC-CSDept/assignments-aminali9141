@@ -10,7 +10,7 @@ void deDup(Numbers &, Numbers &);
 
 int main(){
 srand(time(0));
-consts int N = 5;
+const int N = 5;
 Numbers numberset[] = {Numbers(1,3),Numbers(2,5),Numbers(3,10),Numbers(4,5),Numbers(5,3),}
 
  for (int i = 0; i < N; i++) {
