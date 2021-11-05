@@ -25,7 +25,12 @@ int Numbers::getSize() const{
     return numbers.size;
 }
 int Numbers::getElm(int index) const {
-    return numbers[i];
+    if(index > numbers.size()-1){
+        cout << "Error Index \n";
+    } else {
+        return numbers[i];
+    }
+    throw -1;
 }
 
 
