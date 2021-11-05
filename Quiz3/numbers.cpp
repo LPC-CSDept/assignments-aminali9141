@@ -65,6 +65,43 @@ int Numbers::getMin(int index) const {
     }
     throw -1;
 }
+int Numbers::getSum(int index) const {
+    if(number.size() == 0){
+        cout << "Error No Numbers \n";
+        throw -1;
+    } else if {numbers.size() == 1 )
+        return numbers[0];
+    } else{
+        int sum = 0;
+        for(int i=0; i< number.size() - 1; i++){
+        sum += numbers[i]
+        }
+        return sum;
+        
+     }
+    }
+    throw -1;
+}
+void Numbers::deleteElm(int value) {
+    vector<int>::iterator iter;
+    for(iter = numbers.begin(); iter < numbers.end(); iter+) {
+        if(*iter == value){
+            numbers.erase(iter--);
+        }
+    }
+}
+void Numbers::addElm(int num) {
+    numbers.push_back(num);
+}
+void Numbers::printAll() const {
+    if(numbers.size() == 0){
+        cout << "Error no number";
+    } else {
+        for(int i = 0; i < numbers.size()-1;i++){
+            cout << numbers[i];
+        }
+    }
+}
 
 
 
