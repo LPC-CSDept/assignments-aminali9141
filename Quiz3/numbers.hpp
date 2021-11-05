@@ -8,10 +8,13 @@
 using namespace std;
 class Numbers {
     private:
-    int ID;
+    int id;
     vector <int> numbers;
     
     public:
+Numbers();
+Numbers(int, int);
+~Numbers();
 
 int getID() const;      
 int getSize() const;      
@@ -22,4 +25,5 @@ int getSum() const;
 void deleteElm(int d);
 void addElm(int);
 void printAll() const;
-} ;         
+} ;    
+#endif     
