@@ -32,6 +32,40 @@ int Numbers::getElm(int index) const {
     }
     throw -1;
 }
+int Numbers::getMax(int index) const {
+    if(number.size()-1){
+        return numbres[0];
+        cout << "Error No Numbers \n";
+    } else {
+        return numbers[i];
+    } else{
+        int max = numbers[0];
+        for(int i=0; i< number.size( - 1; i++))
+        int current = numbers[i];
+        if(current > max) {
+            max = current;
+        }
+    }
+    throw -1;
+}
+int Numbers::getMin(int index) const {
+    if(number.size() == 0){
+        return numbres[0];
+        cout << "Error No Numbers \n";
+        throw -1;
+    } else if {numbers.size() == 1 )
+        return numbers[i];
+    } else{
+        int min = numbers[0];
+        for(int i=0; i< number.size( - 1; i++))
+        int current = numbers[i];
+        if(current < min>) {
+            min = current;
+        }
+    }
+    throw -1;
+}
+
 
 
  
