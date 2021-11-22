@@ -22,4 +22,3 @@ class Student
     void setScores(int, int);
 
 } ;
-#endif
