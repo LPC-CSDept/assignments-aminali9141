@@ -12,11 +12,5 @@ class Student {
 
     public:
       Student() {}
-      Student(int id, string sname, char grade, double scores) {
-          this->id = id;
-          this->name = sname;
-          this->grade = grade;
-          this->scores = scores;
-      }
-
+      Student(int id, string sname, char grade, double scores)
 }
