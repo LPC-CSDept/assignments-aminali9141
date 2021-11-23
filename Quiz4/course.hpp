@@ -15,6 +15,9 @@ class Course {
       Course();
 
       Course(string cname, int credits, string semester, vector<Student>students);
+      
+      friend ostream& operator<< (ostream &os, const Course& n);
+      friend istream& operator<< (istream &is,Course& n);
 
       void addStudent(Student &s);
 
@@ -22,17 +25,11 @@ class Course {
 
       int getCountOfCourses();
 
-      istream& operator >> (istream& is, Course& course){
-        is>> course.cname>> course.credits>> course.semseter;
-        int n,id;
-        double score;
-        string name;
-        char grade;
-        is>>n;
-        for(int i=0;i<n;i++){
-            is >> id >> name >> grade >> score;
-            student = Student(id, name, grade, score);
-            course.students.push_back(student);
-        }
       }
-}
+};
+
+class Fraction{
+    //rest is the same
+};
+
+ostream& operator<<(ostream &os, const Fraction& n)
