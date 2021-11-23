@@ -12,5 +12,7 @@ class Student {
 
     public:
       Student() {}
-      Student(int id, string sname, char grade, double scores)
+      Student(int id, string sname, char grade, double scores);
+
+      void setStudent(int id, string sname, char grade, double scores);
 }
