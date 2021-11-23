@@ -46,8 +46,17 @@ istream& operator>>(istream &is, Course& course)
     string cname, semester;
     int credits;
     is >> cname>> credits>> semester;
-    Student stu(id, name, grade, score);
-    course.getStudents().push_back(stu);
+    int n,id;
+    double score;
+    string name;
+    char grade;
+    is>>n;
+    for(int i = 0;i<n;i++){
+        is >> id >> name  >> grade >> score;
+        Student stu(id, name, grade, score);
+        course.getStudents().push_back(stu);
+    }
     course.setCourse(cname, credits, semester, course.getStudents());
     return is;
 }
+
