@@ -14,7 +14,7 @@ class Student {
       Student() {}
       Student(int id, string sname, char grade, double scores) {
           this->id = id;
-          this->name = name;
+          this->name = sname;
           this->grade = grade;
           this->scores = scores;
       }
