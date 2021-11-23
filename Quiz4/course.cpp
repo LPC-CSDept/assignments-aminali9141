@@ -26,8 +26,3 @@ void Course:::setCourse(string cname, int credits, string semester, vector<Stude
 int Course::getCountofCourses(){
     return Course::NUM_COURSES;
 }
-
-istream& operator>> (istream& is, Course& course) {
-    is >>
-    return is;
-}
