@@ -15,4 +15,4 @@ class Student {
       Student(int id, string sname, char grade, double scores);
 
       void setStudent(int id, string sname, char grade, double scores);
-}
+};

@@ -18,7 +18,7 @@ void Course::addStudent(Student &s) {
     this->students.push_back(s);
 }
 
-void Course:::setCourse(string cname, int credits, string semester, vector<Student> students) {
+void Course::setCourse(string cname, int credits, string semester, vector<Student> students) {
     this->cname = cname;
     this->credits = credits;
     this->semester = semester;
@@ -28,7 +28,7 @@ void Course:::setCourse(string cname, int credits, string semester, vector<Stude
 int Course::getCountofCourses(){
     return Course::NUM_COURSES;
 }
-string Course::getCname(){
+string Course::getCName(){
     return this->cname;
 }
 int Course::getCredit(){
@@ -58,5 +58,15 @@ istream& operator>>(istream &is, Course& course)
     }
     course.setCourse(cname, credits, semester, course.getStudents());
     return is;
+}
+
+ostream& operator<<(ostream &os, Course& course) {
+    os << course.getCName() << "\t" << course.getCredit() << "\t" << course.getSemester() << "\n";
+    os << "Student ID \t" << "Credit\t" << "Grade\t" << "Score\n";
+    vector<Student> stu = course.getStudents();
+    for(int i = 0; i < stu.size(); i++){
+        os << stu[i].getID() << "\t" << stu[i].getSName() << "\t" << stu[i].getGrade() << "\t" << stu[i].getScores() << "\n";
+    } 
+    return os;
 }
 
