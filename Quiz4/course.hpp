@@ -17,7 +17,7 @@ class Course {
 
       Course(string cname, int credits, string semester, vector<Student>students);
       
-      //friend ostream& operator<< (ostream &os, const Course& n);
+
       friend istream& operator<< (istream &is,Course& n);
 
       void addStudent(Student &s);
@@ -48,8 +48,8 @@ istream& operator<<(istream &is,const Course& course);
             Student stu(id, name, grade, score);
             course.getStudents().push_back(stu);
         }
-        course.setCourse(cname, credits, semester, course.getStudents())
+        course.setCourse(cname, credits, semester, course.getStudents());
+        return is;
 }
 
 
-//ostream& operator<<(ostream &os, const Fraction& n)
