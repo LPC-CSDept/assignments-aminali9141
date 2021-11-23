@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "students.hpp"
+#include "student.hpp"
 
 using namespace std;
 class Course {
@@ -10,12 +10,7 @@ class Course {
     string semester;
     vector<Student> students;
     public:
-      Course(){}
+      Course();
 
-      Course(string cname, string credits, string semester, vector<Student>students) {
-          this->cname = cname;
-          this->credits = credits;
-          this->semester = semester;
-          this->students = students;
-      }
+      Course(string cname, string credits, string semester, vector<Student>students);
 }
