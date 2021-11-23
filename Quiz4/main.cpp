@@ -2,7 +2,7 @@
 #include "course.hpp"
 #include <fstream>
 
-using namspace std;
+using namespace std;
 
 int main(){
     Course course[4];
@@ -16,6 +16,6 @@ int main(){
     course[2] = c;
     myfile>>c;
     course[3] = c;
-
+    cout << c;
     return 0;
 }

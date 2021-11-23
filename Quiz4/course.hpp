@@ -17,7 +17,7 @@ class Course {
 
       Course(string cname, int credits, string semester, vector<Student>students);
       
-
+      friend ostream& operator<< (ostream &os,Course& course);
       friend istream& operator<< (istream &is,Course& n);
 
       void addStudent(Student &s);
