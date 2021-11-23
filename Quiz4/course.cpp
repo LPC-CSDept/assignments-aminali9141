@@ -6,7 +6,6 @@ using namespace std;
 Course::Course() {
     Course::NUM_COURSES++;
 }
-
 Course::Course(string cname, int credits, string semseter,vector<Student> students) {
     this->cname = cname;
     this->credits = credits;

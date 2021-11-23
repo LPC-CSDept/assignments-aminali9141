@@ -10,22 +10,18 @@ int main(){
     Course c2;
     Course c3;
     Course c4;
-    ifstream myfile("coursestudents.txt");
+    std::ifstream myfile("coursestudents.txt");
     myfile>>course[0];
     cout<<course[0];
-    cout << c;
-    cout<< "\n---------------------\n"
-    course[1];
-    myfile>>c;
-    cout << c;
-    cout<< "\n---------------------\n"
-    course[2] = c;
-    myfile>>c;
-    cout << c;
-    cout<< "\n---------------------\n"
-    course[3] = c; 
-    cout << c;
-    cout << c;
-    cout<< "\n---------------------\n"
+    cout<< "\n---------------------\n";
+    myfile>>course[1];
+    cout<<course[1];
+    cout<< "\n---------------------\n";
+    myfile>>course[2];
+    cout<<course[2];
+    cout<< "\n---------------------\n";
+    myfile>>course[3];
+    cout<<course[3];
+    cout<< "\n---------------------\n";
     return 0;
 }

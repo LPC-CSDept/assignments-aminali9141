@@ -2,8 +2,8 @@
 #include <vector>
 #include "student.hpp"
 #include <string>
-
 using namespace std;
+
 class Course {
     private:
     string cname;
