@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int Course::NUM_COURSES=0;
+
 Course::Course() {
     Course::NUM_COURSES++;
 }
@@ -24,7 +26,7 @@ void Course::setCourse(string cname, int credits, string semester, vector<Studen
     this->students = students;
 }
 
-int Course::getCountofCourses(){
+int Course::getCountOfCourses(){
     return Course::NUM_COURSES;
 }
 string Course::getCName(){
@@ -50,10 +52,11 @@ istream& operator>>(istream &is, Course& course)
     string name;
     char grade;
     is>>n;
+    course.getStudents().clear();
     for(int i = 0;i<n;i++){
         is >> id >> name  >> grade >> score;
         Student stu(id, name, grade, score);
-        course.getStudents().push_back(stu);
+        course.addStudent(stu);
     }
     course.setCourse(cname, credits, semester, course.getStudents());
     return is;
@@ -61,10 +64,10 @@ istream& operator>>(istream &is, Course& course)
 
 ostream& operator<<(ostream &os, Course& course) {
     os << course.getCName() << "\t" << course.getCredit() << "\t" << course.getSemester() << "\n";
-    os << "Student ID \t" << "Credit\t" << "Grade\t" << "Score\n";
+    os << "Student ID \tName\t"  << "Grade\t" << "Score\n";
     vector<Student> stu = course.getStudents();
     for(int i = 0; i < stu.size(); i++){
-        os << stu[i].getID() << "\t" << stu[i].getSName() << "\t" << stu[i].getGrade() << "\t" << stu[i].getScores() << "\n";
+        os << stu[i].getId() << "\t\t" << stu[i].getSName() << "\t" << stu[i].getGrade() << "\t" << stu[i].getScores() << "\n";
     } 
     return os;
 }

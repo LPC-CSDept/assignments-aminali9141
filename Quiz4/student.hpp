@@ -10,12 +10,12 @@ class Student {
 
 
     public:
-      Student() {}
+      Student() ;
       Student(int id, string sname, char grade, double scores);
 
       void setStudent(int id, string sname, char grade, double scores);
 
-      int getID();
+      int getId();
       string getSName();
       char getGrade();
       double getScores();
