@@ -23,7 +23,6 @@ Numbers::Numbers(int s)
     numbers[i] = rand() % 100;
   }
 }
-
 Numbers::Numbers(const Numbers& n)
 {
   size = n.size;
