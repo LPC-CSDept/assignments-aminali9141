@@ -21,6 +21,5 @@ public:
 	int getTotal() const;
 
     bool operator<(const Student& s);
-	void printStudent();
-	
+	void printStudent();	
 };

@@ -54,7 +54,6 @@ private:
 			}
 		}
 	}
-
 public:
 	Students();
 	void print_descending();

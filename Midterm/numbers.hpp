@@ -20,5 +20,4 @@ public:
 	static int getNumObjects(void);
     int operator >(const Numbers& n);
 	friend  void printNumbers(Numbers n);
-
 };
