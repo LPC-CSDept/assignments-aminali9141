@@ -44,7 +44,8 @@
     	return this->getTotal()<s.getTotal();
     }
 
-	void printStudent(Student s)
+	void printStudent()
 	{
 
 	}
+
