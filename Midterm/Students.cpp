@@ -7,6 +7,8 @@
 
 	void Students::print_descending()
 	{
+		sort_descending();
+
 		for (int i = 0; i < N; ++i)
 		{
 			students[i].printStudent();

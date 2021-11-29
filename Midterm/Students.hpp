@@ -22,6 +22,21 @@ private:
 		}
 		infile.close();
 	}
+	void sort_descending()
+	{
+		for (int i = 0; i < N-1; ++i)
+		{
+			for (int j = 0; j < N-i-1; ++j)
+			{
+				if (students[j]<students[j+1])
+				{
+					Student temp=students[j];
+					students[j]=students[j+1];
+					students[j+1]=temp;
+				}
+			}
+		}
+	}
 public:
 	Students();
 	void print_descending();
