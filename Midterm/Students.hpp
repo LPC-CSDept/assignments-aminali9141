@@ -22,5 +22,4 @@ public:
 	static int getNumObjects(void);
     int operator >(const Students& s);
 	friend void printStudent(Students n);
-	
 };
