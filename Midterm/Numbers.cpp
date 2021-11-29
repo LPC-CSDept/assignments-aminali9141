@@ -1,6 +1,6 @@
 #include "Numbers.hpp"
 
-	static int Numbers::NumofObjects=0;
+	int Numbers::NumofObjects=0;
 
 	Numbers::Numbers()
 	{
@@ -16,13 +16,7 @@
 		{
 			values.push_back(rand()%100);
 		}
-
-	}
-
-
-	Numbers::~Numbers()
-	{
-
+		NumofObjects++;
 	}
 
 	int Numbers::getID()
@@ -37,7 +31,20 @@
 
     int Numbers::operator >(const Numbers& n)
     {
+    	int sum1=0;
+    	int sum2=0;
+    	for (int i = 0; i < this->values.size(); ++i)
+    	{
+    		sum1+=this->values[i];
+    	}
+    	for (int i = 0; i < n.values.size(); ++i)
+    	{
+    		sum2+=n.values[i];
+    	}
 
+    	if(sum1>sum2)
+    		return 1;
+    	return 0;
     }
 	
 	void printNumbers(Numbers n)
