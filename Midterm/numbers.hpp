@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-using namepspace std;
+using namespace std;
 
 template <typename T>
 class Numbers
