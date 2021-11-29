@@ -30,7 +30,7 @@
 		return ID;
 	}
 
-	static int Numbers::getNumObjects(void)
+	int Numbers::getNumObjects(void)
 	{
 		return NumofObjects;
 	}
@@ -42,7 +42,7 @@
 	
 	void printNumbers(Numbers n)
 	{
-		for (int i = 0; i < n.size(); ++i)
+		for (int i = 0; i < n.values.size(); ++i)
 		{
 			cout<<n.values[i]<<endl;
 		}
