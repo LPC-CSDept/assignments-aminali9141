@@ -1,25 +1,16 @@
 #include <iostream>
-#include <vector>
+#include <fstream>
 
-using namespace std;
+#include "Student.h"
 
 class Students
 {
 private:
-	int ID;
-	string name;
-	vector<int> scores;
-	static int NumofObjects;
-
+	const int N=10;
+	vector<Student> students;
+	void readStudents();
 public:
 	Students();
-	Students(int i,string n,int s1,int s2,int s3);
+	void print_descending();
 
-	int getScore1();
-	int getScore2();
-	int getScore3();
-
-	static int getNumObjects(void);
-    int operator >(const Students& s);
-	friend void printStudent(Students n);
 };
