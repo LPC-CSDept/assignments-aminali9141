@@ -33,18 +33,18 @@
 	{
 		return scores[2];
 	}
-	int Student::getTotal()
+	int Student::getTotal() const
 	{
-		return s1+s2+s3;
+		return scores[0]+scores[1]+scores[2];
 	}
 
 
     int Student::operator <(const Student& s)
     {
-    	return this->getTotal()<s.getTotal();
+    	return getTotal()<s.getTotal();
     }
 
-	void printStudent()
+	void Student::printStudent()
 	{
 
 	}

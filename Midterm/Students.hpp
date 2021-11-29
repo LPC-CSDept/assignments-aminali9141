@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "Student.h"
+#include "Student.hpp"
 
 using namespace std;
 
@@ -18,7 +18,7 @@ private:
 		string name;
 		while(infile>>id>>name>>s1>>s2>>s3)
 		{
-			Student temp=new Student(id,name,s1,s2,s3);
+			Student *temp=new Student(id,name,s1,s2,s3);
 		}
 		infile.close();
 	}

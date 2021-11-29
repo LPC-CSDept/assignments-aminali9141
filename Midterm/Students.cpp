@@ -1,4 +1,4 @@
-#include "Students.h"
+#include "Students.hpp"
 
 	Students::Students()
 	{
@@ -9,12 +9,15 @@
 	{
 		for (int i = 0; i < N; ++i)
 		{
-			students[i].printStudent()
+			students[i].printStudent();
 		}
 	}
 
 
 	Student Students::getStduentByID(int id)//binary search
 	{
-		
+		Student temp;
+
+
+		return temp;
 	}

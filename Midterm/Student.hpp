@@ -18,9 +18,9 @@ public:
 	int getScore1();
 	int getScore2();
 	int getScore3();
-	int getTotal();
+	int getTotal() const;
 
     int operator <(const Student& s);
-	friend void printStudent(Student s);
+	void printStudent();
 	
 };
