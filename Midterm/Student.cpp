@@ -46,6 +46,6 @@
 
 	void Student::printStudent()
 	{
-
+		cout<<"Name: "<<name<<", ID: "<<ID<<", Score1: "<<scores[0]<<", Score2: "<<scores[1]<<", Score3: "<<scores[2]<<", Total: "<<getTotal()<<endl;
 	}
 

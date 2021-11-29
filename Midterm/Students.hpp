@@ -10,15 +10,16 @@ class Students
 private:
 	const int N=10;
 	const string filename="students.txt";
-	vector<Student> students;
+	vector<Student*> students;
 	void readStudents()
 	{
-		ifstream infile;
+		ifstream infile(filename);
 		int id,s1,s2,s3;
 		string name;
 		while(infile>>id>>name>>s1>>s2>>s3)
 		{
 			Student *temp=new Student(id,name,s1,s2,s3);
+			students.push_back(temp);
 		}
 		infile.close();
 	}
@@ -30,7 +31,7 @@ private:
 			{
 				if (students[j]<students[j+1])
 				{
-					Student temp=students[j];
+					Student *temp=students[j];
 					students[j]=students[j+1];
 					students[j+1]=temp;
 				}
