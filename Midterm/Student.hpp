@@ -20,7 +20,7 @@ public:
 	int getScore3();
 	int getTotal() const;
 
-    int operator <(const Student& s);
+    bool operator<(const Student& s);
 	void printStudent();
 	
 };

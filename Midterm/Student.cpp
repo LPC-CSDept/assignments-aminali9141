@@ -39,9 +39,14 @@
 	}
 
 
-    int Student::operator <(const Student& s)
+    bool Student::operator<(const Student& s)
     {
-    	return getTotal()<s.getTotal();
+    	if (getTotal()<s.getTotal())
+    	{
+    		return 1;
+    	}
+
+    	return 0;
     }
 
 	void Student::printStudent()

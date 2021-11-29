@@ -29,7 +29,7 @@ private:
 		{
 			for (int j = 0; j < N-i-1; ++j)
 			{
-				if (students[j]<students[j+1])
+				if (students[j]->getTotal()<students[j+1]->getTotal())
 				{
 					Student *temp=students[j];
 					students[j]=students[j+1];
@@ -38,10 +38,27 @@ private:
 			}
 		}
 	}
+
+	void sort_asc_by_id()
+	{
+		for (int i = 0; i < N-1; ++i)
+		{
+			for (int j = 0; j < N-i-1; ++j)
+			{
+				if (students[j]->getID()>students[j+1]->getID())
+				{
+					Student *temp=students[j];
+					students[j]=students[j+1];
+					students[j+1]=temp;
+				}
+			}
+		}
+	}
+
 public:
 	Students();
 	void print_descending();
-	Student getStduentByID(int id);
+	void binarySearch();
 
 
 };
