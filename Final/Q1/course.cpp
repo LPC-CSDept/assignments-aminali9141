@@ -55,8 +55,8 @@ bool Course::operator >(const Course& C)
 
 ostream& operator<<(ostream& out, const Course& course)
 {
-    out<<"Course ID: "<<course.getID()<<endl;
-    out<<"Course Name: "<<course.getName()<<endl;
-    out<<"Course Credit: "<<course.getCredit()<<endl;
+    out<<"Course ID: "<<course.ID<<endl;
+    out<<"Course Name: "<<course.name<<endl;
+    out<<"Course Credits: "<<course.credit<<endl;
     return out;
 }
