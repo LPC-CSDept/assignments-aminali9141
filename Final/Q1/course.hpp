@@ -23,6 +23,7 @@ public:
     void printCourse();
 
     bool operator >(const Course& C);
+    friend ostream& operator<<(ostream& out, const Course& course);
 
     
 };

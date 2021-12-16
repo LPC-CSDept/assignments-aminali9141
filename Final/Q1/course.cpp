@@ -52,3 +52,11 @@ bool Course::operator >(const Course& C)
 
     return false;
 }
+
+ostream& operator<<(ostream& out, const Course& course)
+{
+    out<<"Course ID: "<<course.getID()<<endl;
+    out<<"Course Name: "<<course.getName()<<endl;
+    out<<"Course Credit: "<<course.getCredit()<<endl;
+    return out;
+}

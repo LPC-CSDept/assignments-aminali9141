@@ -45,7 +45,7 @@ int main()
   //bubble sorting
   bubbleSort(courses,count);
 
-  cout<<courses[0].getID();
+  
 
   return 0;
 } 
