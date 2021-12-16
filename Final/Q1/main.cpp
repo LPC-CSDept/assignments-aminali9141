@@ -17,7 +17,9 @@ int main() {
     fin>>ID;
     fin>>name;
     fin>>credit;
-    courses[i]=new Course(ID,name,credit);
+    courses[i].setID(ID);
+    courses[i].setName(name);
+    courses[i].setCredit(credit);
   }  
   fin.close();
 
