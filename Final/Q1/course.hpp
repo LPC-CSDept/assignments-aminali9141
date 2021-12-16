@@ -21,6 +21,9 @@ public:
     void setName(string);
     void setCredit(int);
     void printCourse();
+
+    bool operator >(const Course& C);
+
     
 };
 #endif

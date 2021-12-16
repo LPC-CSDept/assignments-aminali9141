@@ -1,4 +1,4 @@
-#include "course.hpp"
+#include "Course.hpp"
 #include <iostream>
 #include <string>
 
@@ -8,13 +8,13 @@ Course::Course(){
     credit=0;
 }
 
-Course::~Course(int IDnum, string coursename, int totalcredit){
-    ID = IDnum;
-    name = coursename;
-    credit = totalcredit;
+Course::Course(int id, string name, int credit){
+    ID = id;
+    name = name;
+    credit = credit;
 }
 
-int Course::GetID(){
+int Course::getID(){
     return ID;
 }
 
@@ -26,18 +26,29 @@ int Course::getCredit(){
     return credit;
 }
 
-void Course::setID(int newID) {
-    ID = newID;
+void Course::setID(int id) {
+    this->ID = id;
 }   
 
-void Course::setName(string getName;){
-    name = getName;
+void Course::setName(string name){
+    this->name = name;
 }
 
-int Course::setCredit(int getCredits){
-    credit = getCredits;
+void Course::setCredit(int credit){
+    this->credit = credit;
 }
 
-void Course::printAll(){
+void Course::printCourse(){
     cout << ID << "\t" << name << "\t" << credit << endl;
+}
+ 
+
+bool Course::operator >(const Course& C)
+{
+    if (ID>C.ID)
+    {
+        return true;
+    }
+
+    return false;
 }
