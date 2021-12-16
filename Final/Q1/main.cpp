@@ -22,27 +22,48 @@ void bubbleSort(Course courses[],int count)
 
 }
 
-Course binarySearchIterative(Course courses[],int count,int course_id)
+int binarySearchIterative(Course courses[],int count,int course_id)
 {
-  Course course;
-    int left=0;
-    int right=count-1;
 
-    while (left <= right) 
-    {
-        int middle = left + (right - left) / 2;
-        if (courses[middle].getID() == course_id)
-            return courses[middle];
-        if (courses[middle].getID() < course_id)
-            left = middle + 1;
-        else
-        if (courses[middle].getID() > course_id)
-            right = middle - 1;
+  int left=0;
+  int right=count-1;
+
+  while (left <= right) 
+  {
+    int middle = left + (right - left) / 2;
+    if (courses[middle].getID() == course_id)
+      return middle;
+    if (courses[middle].getID() < course_id)
+      left = middle + 1;
+    else
+      if (courses[middle].getID() > course_id)
+        right = middle - 1;
     }
- 
-    course.setID(-1);
-    return course;
-}
+
+    return -1;
+  }
+
+
+  int binarySearchRecursive(Course courses[], int left, int right, int course_id)
+  {
+   if (right >= left)
+   {
+    int middle = left + (right - left)/2;
+
+    if (courses[middle].getID() == course_id)  
+      return middle;
+
+    if (courses[middle].getID() < course_id) 
+      return binarySearchRecursive(courses, middle+1, right, course_id);
+    
+    return binarySearchRecursive(courses, left, middle-1, course_id);
+
+  }
+  
+
+  return -1;
+} 
+
 
 int main() 
 {
@@ -74,16 +95,16 @@ int main()
   cout<<"\nEnter course id to find: ";
   cin>>course_id;
 
-  Course course=binarySearchIterative(courses,count,course_id);
+  int course_index=binarySearchIterative(courses,count,course_id);
   cout<<endl;
-  if (course.getID()==-1)
+  if (course_index==-1)
   {
     cout<<"Course id "<<course_id<<" not found"<<endl;
   }
   else
   {
     cout<<"Course id "<<course_id<<" found"<<endl<<endl;    
-    cout<<course<<endl;
+    cout<<courses[course_index]<<endl;
   }
 
   cout<<endl;
