@@ -6,7 +6,6 @@ using namespace std;
 
 void bubbleSort(Course courses[],int count)
 {
-
   for (int i = 0; i < count-1; i++)    
   {
     for (int j = 0; j < count-i-1; j++)
@@ -15,7 +14,8 @@ void bubbleSort(Course courses[],int count)
       {
         Course temp;
         temp=courses[j];
-        courses[j]=temp;
+        courses[j]=courses[j+1];
+        courses[j+1]=temp;
       }
     }
   }     
@@ -45,6 +45,7 @@ int main()
   //bubble sorting
   bubbleSort(courses,count);
 
+  cout<<courses[0].getID();
 
   return 0;
 } 
