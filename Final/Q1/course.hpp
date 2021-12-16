@@ -5,10 +5,9 @@
 using namespace std;
 class Course {
     private:
-    int id;
+    int ID;
     string name;
     int credit;
-}
 
 public: 
     Course();
