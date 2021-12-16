@@ -26,6 +26,18 @@ int Course::getCredit(){
     return credit;
 }
 
+void Course::setID(int newID) {
+    ID = newID;
+}   
+
+void Course::setName(string getName;){
+    name = getName;
+}
+
+int Course::setCredit(int getCredits){
+    credit = getCredits;
+}
+
 void Course::printAll(){
-    cout << ID << "" << name << "" << credit << endl;
+    cout << ID << "\t" << name << "\t" << credit << endl;
 }
