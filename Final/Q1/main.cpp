@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "Course.hpp"
+#include "course.hpp"
 using namespace std;
 
 void bubbleSort(Course courses[],int count)
