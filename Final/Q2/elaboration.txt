@@ -1,0 +1,5 @@
+For question two, I had trouble with "Show the Recursion-Call hierarchy with the typical parameter values that were used.
+example; the parameters in this example just denotes the range of the slit" part which had me confused and I couldn't find the fix
+for the matter.. I also had an issue with ostream overloading as friend function, fixed it by removing friend keyword in implementation 
+also had a segmentation fault error while implemention quicksort, fixed it by if block   if (left < right).
+. 

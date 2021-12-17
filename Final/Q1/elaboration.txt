@@ -1,0 +1,2 @@
+Didn't really have much issues but i had an issue with ostream overloading 
+as friend function, fixed it by removing friend keyword in implementation but that was about it. 

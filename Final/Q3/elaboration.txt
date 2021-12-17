@@ -1,0 +1,2 @@
+Again had an issue while implementation of ostream overloading , but this time the error happens
+when I tried to call Parent class's ostream, fixed it by calling correct way out<<(const Employee &)pWorker;
