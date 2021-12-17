@@ -65,6 +65,15 @@ int binary_search(Course courses[],int count,int course_id)
 } 
 
 
+void printCourses(Course courses[],int count)
+{
+  for (int i = 0; i < count; ++i)
+  {
+    cout<<courses[i]<<endl<<endl;
+  }
+}
+
+
 int main() 
 {
   Course courses[10];
@@ -87,8 +96,16 @@ int main()
   }  
   fin.close();
 
+  cout<<"\nCourse list before sorting\n"<<endl;
+  printCourses(courses,count);
+
   //bubble sorting
   bubbleSort(courses,count);
+
+  cout<<"Sorting Done....\n"<<endl;
+
+  cout<<"Course list after sorting\n"<<endl;
+  printCourses(courses,count);
 
   //binary search iterative
   cout<<"\n*** Binary search iterative ***"<<endl<<endl;
