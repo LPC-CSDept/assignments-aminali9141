@@ -49,4 +49,10 @@ void Employee::setHireDate(string date)
 }
 
 
-
+ostream& operator<<(ostream& out, const Employee& emp)
+{
+    out<<"Employee name: "<<emp.eName<<endl;
+    out<<"Employee number: "<<emp.eNnumber<<endl;
+    out<<"Employee hire date: "<<emp.hireDate<<endl;
+    return out;	
+}

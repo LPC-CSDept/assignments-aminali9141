@@ -14,6 +14,8 @@ public:
 	void setShift(int);
 	double getHourlyPay();
 	void setHourlyPay(double);
+	friend ostream& operator<<(ostream& out, const ProductionWorker& pWorker);
+	
 };
 
 #endif

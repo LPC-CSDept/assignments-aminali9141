@@ -21,6 +21,8 @@ public:
 	void setEmployeeNumber(int);
 	string getHireDate();
 	void setHireDate(string);
+    friend ostream& operator<<(ostream& out, const Employee& emp);
+
 };
 
 

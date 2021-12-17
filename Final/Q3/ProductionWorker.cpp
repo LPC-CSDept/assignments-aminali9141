@@ -30,3 +30,12 @@ void ProductionWorker::setHourlyPay(double pay)
 	this->hourlyPay = pay;
 }
 
+
+ostream& operator<<(ostream& out, const ProductionWorker& pWorker)
+{
+    out<<"Employee shift: "<<pWorker.shift<<endl;
+    out<<"Employee hourly pay: "<<pWorker.hourlyPay<<endl;	
+
+    return out;
+}
+
