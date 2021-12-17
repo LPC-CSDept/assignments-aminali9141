@@ -4,17 +4,46 @@
 #include "course.hpp"
 using namespace std;
 
+
+int partition(Course courses[], int left, int right)
+{
+  Course pivot_item = courses[right];
+  int l = left - 1;
+
+  for (int j = left; j <= right- 1; j++)
+  {
+    if (courses[j] <= pivot_item)
+    {
+
+      Course temp;
+      temp=courses[l+1];
+      courses[l+1]=courses[j];
+      courses[j]=temp;
+      l++;
+
+    }
+  }
+
+  l++; 
+  Course temp;
+  temp=courses[l];
+  courses[l]=courses[right];
+  courses[right]=temp;  
+
+  return l;
+}
+
 //quick sort recursive
 void qsort(Course courses[], int left, int right)
 {
-    if (left < right)
-    {
-       // int partition_index = partition(courses, left,right);
-        qsort(courses, left, partition_index - 1);
-        qsort(courses, partition_index + 1, right);
-    }
+  if (left < right)
+  {
+    int partition_index = partition(courses, left,right);
+    qsort(courses, left, partition_index - 1);
+    qsort(courses, partition_index + 1, right);
+  }
 }
- 
+
 
 int binary_search(Course courses[],int count,int course_id)
 {
@@ -82,8 +111,8 @@ int main()
   fin.close();
 
   //quick sort recursive
-  qsort(courses,count);
-  cout<<"Quick Sort Done...."
+  qsort(courses,0,count-1);
+  cout<<"Quick Sort Done...."<<endl;
 
   //binary search iterative
   cout<<"\n*** Binary search iterative ***"<<endl<<endl;

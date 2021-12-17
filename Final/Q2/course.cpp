@@ -53,6 +53,18 @@ bool Course::operator >(const Course& C)
     return false;
 }
 
+
+bool Course::operator <=(const Course& C)
+{
+    if (ID<=C.ID)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+
 ostream& operator<<(ostream& out, const Course& course)
 {
     out<<"Course ID: "<<course.ID<<endl;
