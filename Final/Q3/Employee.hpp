@@ -14,12 +14,13 @@ private:
 
 public:
 	Employee();
-	void setEmployeeName(string employeeName);
-	void setEmployeeNumber(int);
-	void setHireDate(int);
+	Employee(string,int,int);
 	string getEmployeeName();
+	void setEmployeeName(string);
 	int getEmployeeNumber();
+	void setEmployeeNumber(int);
 	int getHireDate();
+	void setHireDate(int);
 };
 
 
