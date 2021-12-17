@@ -36,6 +36,7 @@ int partition(Course courses[], int left, int right)
 //quick sort recursive
 void qsort(Course courses[], int left, int right)
 {
+ // cout<<left<<","<<right<<endl;
   if (left < right)
   {
     int partition_index = partition(courses, left,right);
@@ -87,6 +88,13 @@ int binary_search(Course courses[],int count,int course_id)
   return -1;
 } 
 
+void printCourses(Course courses[],int count)
+{
+  for (int i = 0; i < count; ++i)
+  {
+    cout<<courses[i]<<endl<<endl;
+  }
+}
 
 int main() 
 {
@@ -110,9 +118,15 @@ int main()
   }  
   fin.close();
 
+  cout<<"\nCourse list before sorting\n"<<endl;
+  printCourses(courses,count);
+
   //quick sort recursive
   qsort(courses,0,count-1);
-  cout<<"Quick Sort Done...."<<endl;
+  cout<<"Quick Sort Done....\n"<<endl;
+
+  cout<<"Course list after sorting\n"<<endl;
+  printCourses(courses,count);
 
   //binary search iterative
   cout<<"\n*** Binary search iterative ***"<<endl<<endl;
