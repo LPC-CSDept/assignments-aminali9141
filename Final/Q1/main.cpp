@@ -22,7 +22,7 @@ void bubbleSort(Course courses[],int count)
 
 }
 
-int binarySearchIterative(Course courses[],int count,int course_id)
+int binary_search(Course courses[],int count,int course_id)
 {
 
   int left=0;
@@ -44,7 +44,7 @@ int binarySearchIterative(Course courses[],int count,int course_id)
   }
 
 
-  int binarySearchRecursive(Course courses[], int left, int right, int course_id)
+  int recursive_binary_search(Course courses[], int left, int right, int course_id)
   {
    if (right >= left)
    {
@@ -54,9 +54,9 @@ int binarySearchIterative(Course courses[],int count,int course_id)
       return middle;
 
     if (courses[middle].getID() < course_id) 
-      return binarySearchRecursive(courses, middle+1, right, course_id);
+      return recursive_binary_search(courses, middle+1, right, course_id);
     
-    return binarySearchRecursive(courses, left, middle-1, course_id);
+    return recursive_binary_search(courses, left, middle-1, course_id);
 
   }
   
@@ -91,23 +91,54 @@ int main()
   bubbleSort(courses,count);
 
   //binary search iterative
-  cout<<"\n*** Binary search iterative ***"<<endl;
-  cout<<"\nEnter course id to find: ";
-  cin>>course_id;
+  cout<<"\n*** Binary search iterative ***"<<endl<<endl;
+  cout<<"*********************************************"<<endl;
 
-  int course_index=binarySearchIterative(courses,count,course_id);
-  cout<<endl;
-  if (course_index==-1)
+  for (int i = 0; i < 10; ++i)
   {
-    cout<<"Course id "<<course_id<<" not found"<<endl;
-  }
-  else
-  {
-    cout<<"Course id "<<course_id<<" found"<<endl<<endl;    
-    cout<<courses[course_index]<<endl;
+    int course_id=rand()%15+100;
+    cout<<"Find Course id "<<course_id<<endl;
+    int course_index=binary_search(courses,count,course_id);
+    cout<<endl;
+    if (course_index==-1)
+    {
+      cout<<"Error: Course id "<<course_id<<" not found"<<endl;
+    }
+    else
+    {
+      cout<<"Course id "<<course_id<<" found"<<endl<<endl;    
+      cout<<courses[course_index]<<endl;
+    }
+    cout<<"*********************************************"<<endl;
+    cout<<endl;
   }
 
-  cout<<endl;
+  cout<<"#########################################################"<<endl;
+  cout<<"#########################################################"<<endl;
+
+  //binary search recursive
+  cout<<"\n*** Binary search recursive ***"<<endl<<endl;
+  cout<<"*********************************************"<<endl;
+
+  for (int i = 0; i < 10; ++i)
+  {
+    int course_id=rand()%15+100;
+    cout<<"Find Course id "<<course_id<<endl;
+    int course_index=recursive_binary_search(courses,0,count-1,course_id);
+    cout<<endl;
+    if (course_index==-1)
+    {
+      cout<<"Error: Course id "<<course_id<<" not found"<<endl;
+    }
+    else
+    {
+      cout<<"Course id "<<course_id<<" found"<<endl<<endl;    
+      cout<<courses[course_index]<<endl;
+    }
+    cout<<"*********************************************"<<endl;
+    cout<<endl;
+  }
+
 
   return 0;
 } 
