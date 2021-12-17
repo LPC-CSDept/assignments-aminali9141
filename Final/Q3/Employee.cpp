@@ -5,11 +5,11 @@ Employee::Employee()
 {
 	this->eName = "";
 	this->eNnumber = 0;
-	this->hireDate = 0;
+	this->hireDate = "";
 
 }
 
-Employee::Employee(string name,int num,int date)
+Employee::Employee(string name,int num,string date)
 {
 	this->eName = name;
 	this->eNnumber = num;
@@ -38,12 +38,12 @@ void Employee::setEmployeeNumber(int num)
 	this->eNnumber = num;
 }
 
-int Employee::getHireDate()
+string Employee::getHireDate()
 {
 	return hireDate;
 }
 
-void Employee::setHireDate(int date)
+void Employee::setHireDate(string date)
 {
 	this->hireDate = date;
 }

@@ -10,17 +10,17 @@ class Employee
 private:
 	string eName;
 	int eNnumber;
-	int hireDate;
+	string hireDate;
 
 public:
 	Employee();
-	Employee(string,int,int);
+	Employee(string,int,string);
 	string getEmployeeName();
 	void setEmployeeName(string);
 	int getEmployeeNumber();
 	void setEmployeeNumber(int);
-	int getHireDate();
-	void setHireDate(int);
+	string getHireDate();
+	void setHireDate(string);
 };
 
 
