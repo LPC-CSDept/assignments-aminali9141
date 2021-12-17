@@ -2,11 +2,15 @@
 
 ProductionWorker::ProductionWorker()
 {
+	this->shift=1;
+	this->hourlyPay = 0;
 
 }
 
-ProductionWorker::ProductionWorker(string name,int num,string date,int shift,double pay)
+ProductionWorker::ProductionWorker(string name,int num,string date,int shift,double pay):Employee(name,num,date)
 {
+	this->shift=shift;
+	this->hourlyPay = pay;
 
 }
 
@@ -52,7 +56,7 @@ ostream& operator<<(ostream& out, const ProductionWorker& pWorker)
 	    out<<"Employee shift: "<<"night"<<endl;
 	}
 
-    out<<"Employee hourly pay: "<<pWorker.hourlyPay<<endl;	
+    out<<"Employee hourly pay: $"<<pWorker.hourlyPay<<endl;	
 
     return out;
 }

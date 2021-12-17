@@ -44,6 +44,47 @@ int main()
   cout<<"\nEmployee list \n"<<endl;
   printWorkers(workers,count);
 
+  ProductionWorker temp=workers[0];
+  for (int i = 1; i < count; ++i)
+  {
+  	if (workers[i]>temp)
+  	{
+  		temp=workers[i];
+  	}
+  }
+  cout<<"\nEmployee who has highest hourly pay rate \n"<<endl;
+  cout<<temp<<endl<<endl;
+  ProductionWorker p1;
+  ProductionWorker p2("John", 10001, "12/24/2021", 1, 20.0);
+  ProductionWorker p3("Ali", 10005, "12/23/2022", 2, 30.0);
+
+  cout<<"Testing > overload"<<endl<<endl;
+
+  cout<<p1<<endl<<endl;
+  cout<<p2<<endl<<endl;
+  cout<<p3<<endl<<endl;
+
+  cout<<"Comparing p1 and p2"<<endl;
+  if (p1>p2)
+  {
+  	cout<<p1.getEmployeeName()<<" has highest hourly pay rate $"<<p1.getHourlyPay()<<endl;
+  }
+  else
+  {
+  	cout<<p2.getEmployeeName()<<" has highest hourly pay rate $"<<p2.getHourlyPay()<<endl;  	
+  }
+
+  cout<<"Comparing p2 and p3"<<endl;
+
+  if (p2>p3)
+  {
+  	cout<<p2.getEmployeeName()<<" has highest hourly pay rate $"<<p2.getHourlyPay()<<endl;
+  }
+  else
+  {
+  	cout<<p3.getEmployeeName()<<" has highest hourly pay rate $"<<p3.getHourlyPay()<<endl;  	
+  }
+  
 
 	return 0;
 }
